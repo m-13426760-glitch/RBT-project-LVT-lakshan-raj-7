@@ -1,0 +1,41 @@
+basic.showIcon(IconNames.Happy)
+music.play(music.stringPlayable("C5 B A G F E D C ", 100), music.PlaybackMode.UntilDone)
+music.play(music.stringPlayable("C D E F G A B C5 ", 100), music.PlaybackMode.UntilDone)
+basic.forever(function () {
+    if (input.logoIsPressed()) {
+        music._playDefaultBackground(music.builtInPlayableMelody(Melodies.Entertainer), music.PlaybackMode.InBackground)
+        pins.servoWritePin(AnalogPin.P2, 90)
+        basic.pause(1000)
+        pins.servoWritePin(AnalogPin.P2, 0)
+        basic.showIcon(IconNames.Yes)
+        basic.showString("THANKS")
+        music.play(music.builtinPlayableSoundEffect(soundExpression.giggle), music.PlaybackMode.UntilDone)
+        basic.showIcon(IconNames.Heart)
+        basic.pause(100)
+        basic.clearScreen()
+    }
+    if (input.buttonIsPressed(Button.A)) {
+        music._playDefaultBackground(music.builtInPlayableMelody(Melodies.Entertainer), music.PlaybackMode.InBackground)
+        pins.servoWritePin(AnalogPin.P2, 90)
+        basic.pause(1000)
+        pins.servoWritePin(AnalogPin.P2, 0)
+        basic.showIcon(IconNames.Yes)
+        basic.showString("THANKS")
+        music.play(music.builtinPlayableSoundEffect(soundExpression.giggle), music.PlaybackMode.UntilDone)
+        basic.showIcon(IconNames.Heart)
+        basic.pause(100)
+        basic.clearScreen()
+    }
+    if (input.buttonIsPressed(Button.B)) {
+        music._playDefaultBackground(music.builtInPlayableMelody(Melodies.Entertainer), music.PlaybackMode.InBackground)
+        pins.servoWritePin(AnalogPin.P2, 90)
+        basic.pause(1000)
+        pins.servoWritePin(AnalogPin.P2, 0)
+        basic.showIcon(IconNames.Yes)
+        basic.showString("THANKS")
+        music.play(music.builtinPlayableSoundEffect(soundExpression.giggle), music.PlaybackMode.UntilDone)
+        basic.showIcon(IconNames.Heart)
+        basic.pause(100)
+        basic.clearScreen()
+    }
+})
